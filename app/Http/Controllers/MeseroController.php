@@ -8,8 +8,7 @@ class MeseroController extends Controller
 {
 
   
-   public function obtenerMeseros()
-{
+   public function obtenerMeseros(){
     $response = Http::get('https://restaurantecomidastipicasdelsur-production.up.railway.app/api/Consultas/ventas-meseros');
 
     if ($response->successful()) {

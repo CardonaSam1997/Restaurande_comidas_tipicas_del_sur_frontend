@@ -25,7 +25,7 @@ class PlatoController extends Controller
 
                 // Verificamos que sea un array (colección de platos)
                 if (is_array($data)) {
-                    $platos = $data;
+                    $plato = $data;
                 } else {
                     $error = 'La respuesta de la API no es válida.';
                 }
@@ -37,7 +37,7 @@ class PlatoController extends Controller
         }
     }
 
-    return view('platoMasVendido', compact('platos', 'error'));
+    return view('platoMasVendido', compact('plato', 'error'));
 }
 
 }

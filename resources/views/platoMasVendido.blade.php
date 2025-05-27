@@ -24,7 +24,7 @@
         <button type="submit" class="btn btn-success">Buscar</button>
     </form>
 
-    @if(isset($platos) && count($platos) > 0)
+    @if(isset($plato))
         <h4 class="mt-5">Resultados</h4>
         <table class="table table-bordered mt-3">
             <thead class="table-dark">
@@ -35,13 +35,13 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($platos as $plato)
+               
                 <tr>
                     <td>{{ $plato['plato'] }}</td>
                     <td>{{ $plato['cantidadVendida'] }}</td>                    
                     <td>{{ $plato['totalFacturado'] }}</td>
                 </tr>
-                @endforeach
+             
             </tbody>
         </table>
     @elseif(isset($error))

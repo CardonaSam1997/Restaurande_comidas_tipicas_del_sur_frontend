@@ -9,7 +9,7 @@
     <div class="container mt-5">
         <h2 class="mb-4">Crear Factura</h2>
 
-        <form method="POST" action="{{ route('factura.enviar') }}">
+        <form id="form-factura">
             @csrf
 
             <div class="card mb-3">
@@ -95,5 +95,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/factura.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
