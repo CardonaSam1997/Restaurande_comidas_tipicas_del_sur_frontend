@@ -6,7 +6,11 @@ use App\Http\Controllers\PlatoController;
 use App\Http\Controllers\FacturaController;
 use Illuminate\Support\Facades\Route;
 
-#Route::get('/Meseros', [MeseroController::class,'obtenerMeseros']);
+
+Route::get('/', function () {
+    return view('main');
+});
+
 Route::get('/meseros', [MeseroController::class, 'obtenerMeseros']);
 
 Route::get('/clientes/consumo', [ClienteController::class, 'buscarPorConsumo'])->name('clientes.consumo');
@@ -15,6 +19,8 @@ Route::get('/plato/mas-vendido', [PlatoController::class, 'buscarPlatoMasVendido
 
 Route::view('/factura', 'registrarFactura');
 Route::post('/enviar-factura', [FacturaController::class, 'enviarFactura'])->name('factura.enviar');
+
+
 
 
 

@@ -18,6 +18,13 @@ return [
     |
     */
 
+
+
+
+    // ... otras configuraciones ...
+
+
+
     'driver' => env('SESSION_DRIVER', 'database'),
 
     /*
