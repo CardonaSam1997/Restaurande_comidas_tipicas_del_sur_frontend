@@ -8,7 +8,7 @@ class PlatoController extends Controller
 {
    public function buscarPlatoMasVendido(Request $request)
 {
-    $platos = null;
+    $plato = null;
     $error = null;
 
     if ($request->has(['anio', 'mes'])) {
